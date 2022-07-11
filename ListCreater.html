@@ -1,0 +1,54 @@
+<!DOCType HTML>
+<div class="container">
+<html>
+<head>
+<title class="list-title">List Creator</title>
+<h2>List Creator</h2>
+</head>
+<body>
+    Create a list
+    <br></br>
+    <form>
+        <input type="text" name="textList" id="textList">
+        <button type="button" onclick=myList()>Submit Item</button>
+        <button type="button" onclick=clearList()>Clear List</button>
+        <button type="button" onclick=randomWord()>Display Random Word</button>
+    </form>
+    <br></br>
+
+<ul id="myList2">
+
+</ul>
+
+
+</body>
+</div>
+<script>
+
+    function myList() {
+    var li = document.createElement("li");
+    var inputValue = 
+    document.getElementById("textList").value;
+    var inputPlace = document.createTextNode(inputValue);
+    li.appendChild(inputPlace);
+    document.getElementById("myList2").appendChild(li);
+  }
+  document.getElementById("myList2").value = "";
+
+  function clearList() {
+    myList2.innerHTML = "";
+  }
+
+  
+
+
+  function randomWord() {
+    var words = ["dog","elephant","horse"];
+    var pickWord = words[Math.floor(Math.random()*words.length)];
+    alert(pickWord);
+  }
+
+   
+</script>
+
+</html>
